@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SmileDent - Ordinanca Stomatologjike e Dr. Besnik Emini në Gjilan. Kujdes profesional dhe i personalizuar për shëndetin dhe bukurinë e buzëqeshjes suaj.">
+  <title>SmileDent — Dr. Besnik Emini | Mjeku i Dhëmbëve, Gjilan</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M12,2C10.5,2 9.2,2.8 8.4,4.1C8,3.9 7.5,3.8 7,3.8C5.3,3.8 4,5.1 4,6.8C4,7.4 4.2,8 4.5,8.4C3,9.5 2,11.2 2,13.2C2,17.2 6.5,22 12,22C17.5,22 22,17.2 22,13.2C22,11.2 21,9.5 19.5,8.4C19.8,8 20,7.4 20,6.8C20,5.1 18.7,3.8 17,3.8C16.5,3.8 16,3.9 15.6,4.1C14.8,2.8 13.5,2 12,2M12,4C13,4 13.8,4.7 14,5.7L14.3,7H17C17.6,7 18,7.4 18,8C18,8.2 17.9,8.4 17.7,8.6L16.8,9.5L17.2,10.7C17.7,12.2 17,13.8 15.6,14.6L14,15.5V18C14,18.6 13.6,19 13,19H11C10.4,19 10,18.6 10,18V15.5L8.4,14.6C7,13.8 6.3,12.2 6.8,10.7L7.2,9.5L6.3,8.6C6.1,8.4 6,8.2 6,8C6,7.4 6.4,7 7,7H9.7L10,5.7C10.2,4.7 11,4 12,4Z"/>
+        </svg>
+        <span>SmileDent</span>
+      </a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">Ballina</a>
+        <a href="#services">Shërbimet</a>
+        <a href="#results">Rezultatet</a>
+        <a href="#about">Rreth Nesh</a>
+        <a href="#contact">Na Kontaktoni</a>
+        <!-- Mobile CTA Inside Menu -->
+        <a href="#" class="btn btn-primary btn-mobile-only" onclick="openBookingModal(event)">Termino Vizitën</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="#" class="btn btn-primary" onclick="openBookingModal(event)">
+          <i class="fa-regular fa-calendar-check"></i> Termino Vizitën
+        </a>
+        <button class="burger-menu" id="burgerMenu" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge">Ordinanca Stomatologjike</span>
+        <h1 class="hero-title">Kujdesu për <span>buzëqeshjen</span> tënde</h1>
+        <p class="hero-description">
+          Në SmileDent, nën udhëheqjen e Dr. Besnik Emini, ne ofrojmë shërbime stomatologjike moderne dhe trajtime pa dhimbje për të siguruar që buzëqeshja juaj të shkëlqejë gjithmonë.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">Shërbimet Tona</a>
+          <a href="#contact" class="btn btn-secondary">Na Kontakto</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>10+</h3>
+            <p>Vite Përvojë</p>
+          </div>
+          <div class="stat-item">
+            <h3>5K+</h3>
+            <p>Pacientë të Kënaqur</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Përkushtim & Kujdes</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="hero-blob"></div>
+        <div class="hero-img-wrapper">
+          <img src="img/BIKI.png" alt="Dr. Besnik Emini - SmileDent">
+        </div>
+        <div class="hero-card-floating">
+          <div class="floating-icon">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <div class="floating-text">
+            <h4>Dr. Besnik Emini</h4>
+            <p>Mjek i Dhëmbëve</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Banner -->
+  <section class="highlights">
+    <div class="container highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <i class="fa-solid fa-microscope"></i>
+        </div>
+        <div>
+          <h3>Teknologji Moderne</h3>
+          <p>Përdorim pajisjet dhe materialet më të fundit stomatologjike për trajtime të sakta.</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <i class="fa-solid fa-tooth"></i>
+        </div>
+        <div>
+          <h3>Trajtime pa Dhimbje</h3>
+          <p>Kujdes i butë dhe anestezi moderne për të siguruar rehati maksimale gjatë vizitës suaj.</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <div>
+          <h3>Kujdes i Personalizuar</h3>
+          <p>Çdo pacient merr një plan individual trajtimi të përshtatur sipas nevojave të tij.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">Shërbimet Tona</span>
+        <h2 class="section-title">Çfarë Ofrojmë në SmileDent</h2>
+        <p class="section-desc">Zgjidhni nga një gamë e gjerë shërbimesh profesionale stomatologjike për të gjitha grupmoshat.</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-img">
+            <img src="img/Teeth1.jpg" alt="Dentistri e Përgjithshme">
+          </div>
+          <div class="service-content">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-stethoscope"></i>
+            </div>
+            <h3>Dentistri e Përgjithshme</h3>
+            <p>Kontrolle të rregullta, pastrim profesional i gurëve, trajtimi i kariesit, mbushje cilësore dhe shërim i kanaleve të dhëmbit.</p>
+            <a href="#contact" class="service-link">Termino Vizitë <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Service 2 (Pediatric Dentistry with Kids Photo) -->
+        <div class="service-card">
+          <div class="service-img">
+            <img src="img/Kids.jpg" alt="Stomatologji për Fëmijë">
+          </div>
+          <div class="service-content">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-child"></i>
+            </div>
+            <h3>Dentistri për Fëmijë</h3>
+            <p>Kujdes i veçantë dhe i butë për dhëmbët e qumështit të vogelushëve tuaj. Edukim mbi higjienën dhe fluorizim pa frikë.</p>
+            <a href="#contact" class="service-link">Termino Vizitë <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-img">
+            <img src="img/Teeth4.jpg" alt="Dentistri Estetike">
+          </div>
+          <div class="service-content">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3>Dentistri Estetike</h3>
+            <p>Zbardhje profesionale e dhëmbëve, fasetë (veneers) prej porcelani dhe kompoziti për një buzëqeshje rrezatuese e perfekte.</p>
+            <a href="#contact" class="service-link">Termino Vizitë <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-img">
+            <img src="img/Teeth3.jpg" alt="Implante & Kirurgji">
+          </div>
+          <div class="service-content">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-screwdriver"></i>
+            </div>
+            <h3>Implante Dentare</h3>
+            <p>Zëvendësimi i dhëmbëve të munguar me implante moderne të standardeve më të larta, duke rikthyer funksionin dhe bukurinë.</p>
+            <a href="#contact" class="service-link">Termino Vizitë <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-img">
+            <img src="img/Teeth2.jpg" alt="Ortodonci">
+          </div>
+          <div class="service-content">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-mask-face"></i>
+            </div>
+            <h3>Ortodonci</h3>
+            <p>Drejtimi i dhëmbëve dhe korrigjimi i kafshimit përmes aparateve fikse dhe të lëvizshme për fëmijë dhe të rritur.</p>
+            <a href="#contact" class="service-link">Termino Vizitë <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-img">
+            <img src="img/SmileDent3.png" alt="Parandalim dhe Kujdes" class="img-object-top">
+          </div>
+          <div class="service-content">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Parandalim & Këshilla</h3>
+            <p>Kontrollet e rregullta ndihmojnë në parandalimin e problemeve dentare. Këshillim dhe mbrojtje afatgjatë për dhëmbët tuaj.</p>
+            <a href="#contact" class="service-link">Termino Vizitë <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Before & After Section -->
+  <section class="comparison-section section-padding" id="results">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">Rezultatet Tona</span>
+        <h2 class="section-title">Transformimi i Buzëqeshjes</h2>
+        <p class="section-desc">Shihni rezultatet e shkëlqyera të punës sonë. Tërhiqeni slider-in në mes për të krahasuar gjendjen Para dhe Pas trajtimit.</p>
+      </div>
+      
+      <div class="comparison-wrapper">
+        <div class="comparison-slider-container" id="beforeAfterSlider">
+          <!-- After Image (Below) -->
+          <div class="comparison-img img-after">
+            <img src="img/Teeth-After00.jpg" alt="Pas Trajtimit - SmileDent">
+            <div class="slider-label label-after">Pas</div>
+          </div>
+          <!-- Before Image (Above / Resizable) -->
+          <div class="comparison-img img-before" id="beforeImgWrapper">
+            <img src="img/Teeth-Before00.jpg" alt="Para Trajtimit - SmileDent" id="beforeImg">
+            <div class="slider-label label-before">Para</div>
+          </div>
+          <!-- Handle Bar -->
+          <div class="slider-handle-bar" id="sliderHandle">
+            <div class="slider-handle-button">
+              <i class="fa-solid fa-arrows-left-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Additional Before & After Cases -->
+      <div class="teeth-gallery">
+        <h3 class="teeth-gallery-title">Raste të tjera të suksesshme</h3>
+        <div class="gallery-grid">
+          <!-- Case 1 -->
+          <div class="gallery-item">
+            <div class="gallery-item-img">
+              <img src="img/Teeth-Before01.jpg" alt="Para Trajtimit">
+            </div>
+            <div class="gallery-item-info">Para Trajtimit (Rasti II)</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-item-img">
+              <img src="img/Teeth-After001.jpg" alt="Pas Trajtimit">
+            </div>
+            <div class="gallery-item-info">Pas Trajtimit (Rasti II)</div>
+          </div>
+          <!-- Case 2 -->
+          <div class="gallery-item">
+            <div class="gallery-item-img">
+              <img src="img/Teeth5-Before.jpg" alt="Para Trajtimit">
+            </div>
+            <div class="gallery-item-info">Para Trajtimit (Rasti III)</div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-item-img">
+              <img src="img/Teeth-After02.jpg" alt="Pas Trajtimit">
+            </div>
+            <div class="gallery-item-info">Pas Trajtimit (Rasti III)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section (Rreth Dr. Besnik Emini) -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images-stack">
+          <div class="about-decor-circle"></div>
+          <div class="about-img-main">
+            <img src="img/SmileDent.jpg" alt="SmileDent Clinic">
+          </div>
+          <div class="about-img-sub">
+            <img src="img/SmileDent1.png" alt="Dr. Besnik Emini Care">
+          </div>
+        </div>
+        
+        <div class="about-content">
+          <span class="badge">Rreth Nesh</span>
+          <h2 class="section-title">Kush është Dr. Besnik Emini?</h2>
+          <p>
+            Dr. Besnik Emini është një stomatolog i përkushtuar dhe i pasionuar me seli në Gjilan. Me një përvojë të pasur dhe ndjekje të vazhdueshme të trajnimeve ndërkombëtare, ai ka themeluar <strong>SmileDent</strong> me një qëllim të thjeshtë: të ofrojë shërbime stomatologjike të nivelit më të lartë dhe të krijojë një mjedis të ngrohtë e pa stres për çdo pacient.
+          </p>
+          <div class="about-quote">
+            "Buzëqeshja juaj është pasqyra e shëndetit tuaj. Çdo ditë punojmë me dashuri dhe përkushtim që t'ju rikthejmë besimin në buzëqeshjen tuaj."
+          </div>
+          <p>
+            Ordinanca SmileDent është e pajisur me teknologjinë më moderne, duke mundësuar diagnoza të shpejta, trajtime efikase dhe siguri maksimale higjienike. Ne besojmë se vizita te dentisti nuk duhet të jetë burim ankthi, prandaj kujdesemi veçanërisht për rehatinë tuaj emocionale.
+          </p>
+          
+          <div class="about-list">
+            <div class="about-list-item">
+              <i class="fa-solid fa-circle-check"></i> Trajtime bashkëkohore
+            </div>
+            <div class="about-list-item">
+              <i class="fa-solid fa-circle-check"></i> Standarde të larta higjienike
+            </div>
+            <div class="about-list-item">
+              <i class="fa-solid fa-circle-check"></i> Lokacion i qasshëm
+            </div>
+            <div class="about-list-item">
+              <i class="fa-solid fa-circle-check"></i> Çmime të arsyeshme
+            </div>
+          </div>
+          
+          <a href="#contact" class="btn btn-primary" style="align-self: flex-start;">Vizitoni Ordinancën</a>
+        </div>
+      </div>
+      
+      <!-- Pediatric Community Highlight Section (IP Integj) -->
+      <div class="pediatric-banner">
+        <div class="pediatric-text">
+          <span class="badge" style="background-color: var(--secondary-soft); color: var(--secondary); border-color: rgba(99, 102, 241, 0.15);">Bashkëpunimi me Komunitetin</span>
+          <h3>Kujdesi për Vogëlushët</h3>
+          <p>
+            Dr. Besnik Emini dhe SmileDent kontribuojnë rregullisht në edukimin e fëmijëve për shëndetin oral. Së fundmi patëm një vizitë shumë të këndshme nga vogelushët e kopshtit <strong>IP Integj</strong>, ku mësuam bashkë si të kujdesemi për dhëmbët në mënyrë argëtuese dhe pa frikë! 🦷✨
+          </p>
+          <a href="#contact" class="btn btn-secondary">Termin për Fëmijë</a>
+        </div>
+        <div class="pediatric-photos">
+          <div class="pediatric-photo-item">
+            <img src="img/Kids1.jpg" alt="Vizita nga Kopshti IP Integj - SmileDent">
+          </div>
+          <div class="pediatric-photo-item">
+            <img src="img/Kids2.jpg" alt="Fëmijët duke mësuar për dhëmbët">
+          </div>
+          <div class="pediatric-photo-item">
+            <img src="img/Kids3.jpg" alt="SmileDent Pediatric Care">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">Vlerësimet</span>
+        
+        <p class="section-desc">Mendimet e atyre që na besuan shëndetin e dhëmbëve të tyre janë motivimi ynë më i madh.</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Kam pasur gjithmonë frikë nga dentisti, por Dr. Besniku ndryshoi gjithçka. Trajtimi ishte krejtësisht pa dhimbje dhe stafi ishte jashtëzakonisht i sjellshëm. Rekomandoj me gjithë zemër!"
+          </p>
+          <div class="testimonial-user">
+            <div class="user-avatar">A</div>
+            <div class="user-info">
+              <h4>Arbenita Gashi</h4>
+              <p>Pacient i rregullt</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Zbardhja e dhëmbëve që kam bërë te SmileDent ka tejkaluar të gjitha pritshmëritë e mia. Rezultati është fantastik dhe natyral. Buzëqeshja ime nuk ka dukur kurrë më mirë."
+          </p>
+          <div class="testimonial-user">
+            <div class="user-avatar">V</div>
+            <div class="user-info">
+              <h4>Valon Morina</h4>
+              <p>Pacient kozmetik</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Dërgova vajzën time 5 vjeçare për kontroll dhe isha shumë e shqetësuar se si do të reagonte. Dr. Besniku u tregua aq i dashur dhe i durueshëm, sa vajza ime mezi pret të shkojë prapë!"
+          </p>
+          <div class="testimonial-user">
+            <div class="user-avatar">L</div>
+            <div class="user-info">
+              <h4>Liridona Krasniqi</h4>
+              <p>Nënë e dy fëmijëve</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Appointment Section -->
+  <section class="contact-section section-padding" id="contact">
+    <div class="container">
+      <div class="text-center">
+        <span class="badge">Kontakt</span>
+        <h2 class="section-title">Ejani na Vizitoni</h2>
+        <p class="section-desc">Na kontaktoni direkt ose plotësoni formularin për të caktuar terminin tuaj të ardhshëm.</p>
+      </div>
+      
+      <div class="contact-grid">
+        <!-- Contact details -->
+        <div class="contact-info">
+          <div class="contact-card">
+            <h3>Të Dhënat e Kontaktit</h3>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contact-item-text">
+                  <h4>Numri i Telefonit</h4>
+                  <p><a href="tel:+38344212034">+383 44 212 034</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-item-text">
+                  <h4>Adresa jonë</h4>
+                  <p><a href="https://www.google.com/maps/place/Smile+dent/@42.4578928,21.4651573,18.25z/data=!4m15!1m8!3m7!1s0x13548b599909f505:0x7d040d25e57f0864!2sMunicipality+of+Gnjilane!3b1!8m2!3d42.4634832!4d21.4694098!16s%2Fg%2F120p553t!3m5!1s0x13548d0017f29229:0x31600bf22c6df361!8m2!3d42.4577374!4d21.4652406!16s%2Fg%2F11lyc81v54?hl=en&entry=ttu" target="_blank">Rruga Ilirija, Gjilan, 60000</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="contact-item-text">
+                  <h4>Orari i Punës</h4>
+                  <p>E Hënë - E Shtunë: 09:00 - 18:00<br>E Diel: Mbyllur</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="social-links">
+              <a href="https://www.facebook.com/smiledentks" target="_blank" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/smiledentks/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h3>Rezervo një Termin</h3>
+          <p>Plotësoni të dhënat tuaja dhe ne do t'ju kontaktojmë për të konfirmuar kohën e përshtatshme.</p>
+          
+          <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="formName">Emri & Mbiemri *</label>
+                <input type="text" id="formName" placeholder="Psh. Filan Fisteku" required>
+              </div>
+              <div class="form-group">
+                <label for="formPhone">Numri i Telefonit *</label>
+                <input type="tel" id="formPhone" placeholder="Psh. +383 44 123 456" required>
+              </div>
+              <div class="form-group">
+                <label for="formService">Shërbimi i kërkuar</label>
+                <select id="formService">
+                  <option value="pergjithshme">Dentistri e Përgjithshme</option>
+                  <option value="femije">Dentistri për Fëmijë</option>
+                  <option value="estetike">Dentistri Estetike (Zbardhje)</option>
+                  <option value="ortodonci">Ortodonci (Aparate)</option>
+                  <option value="implante">Implante Dentare</option>
+                  <option value="tjeter">Kontrollë / Tjetër</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="formDate">Data e Preferuar</label>
+                <input type="date" id="formDate">
+              </div>
+              <div class="form-group full-width">
+                <label for="formMessage">Mesazhi juaj (Opsionale)</label>
+                <textarea id="formMessage" placeholder="Na tregoni shkurtimisht mbi nevojat tuaja dentare..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Dërgo Kërkesën për Termin</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Integrated Google Maps Frame for Gjilan Address -->
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.068864980598!2d21.462651776579364!3d42.45773737118671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13548d0017f29229%3A0x31600bf22c6df361!2sSmile%20dent!5e0!3m2!1sen!2s!4v1721200000000!5m2!1sen!2s" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col brand">
+        <a href="#home" class="footer-logo">
+          <svg viewBox="0 0 24 24">
+            <path d="M12,2C10.5,2 9.2,2.8 8.4,4.1C8,3.9 7.5,3.8 7,3.8C5.3,3.8 4,5.1 4,6.8C4,7.4 4.2,8 4.5,8.4C3,9.5 2,11.2 2,13.2C2,17.2 6.5,22 12,22C17.5,22 22,17.2 22,13.2C22,11.2 21,9.5 19.5,8.4C19.8,8 20,7.4 20,6.8C20,5.1 18.7,3.8 17,3.8C16.5,3.8 16,3.9 15.6,4.1C14.8,2.8 13.5,2 12,2M12,4C13,4 13.8,4.7 14,5.7L14.3,7H17C17.6,7 18,7.4 18,8C18,8.2 17.9,8.4 17.7,8.6L16.8,9.5L17.2,10.7C17.7,12.2 17,13.8 15.6,14.6L14,15.5V18C14,18.6 13.6,19 13,19H11C10.4,19 10,18.6 10,18V15.5L8.4,14.6C7,13.8 6.3,12.2 6.8,10.7L7.2,9.5L6.3,8.6C6.1,8.4 6,8.2 6,8C6,7.4 6.4,7 7,7H9.7L10,5.7C10.2,4.7 11,4 12,4Z"/>
+          </svg>
+          <span>SmileDent</span>
+        </a>
+        <p>Ordinanca Stomatologjike e Dr. Besnik Emini. Ofrojmë zgjidhje profesionale për shëndetin oral dhe kujdesemi që të keni një buzëqeshje të shndritshme.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/smiledentks" target="_blank" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/smiledentks/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Linqe të Shpejta</h4>
+        <nav class="footer-links">
+          <a href="#home">Ballina</a>
+          <a href="#services">Shërbimet</a>
+          <a href="#results">Rezultatet tona</a>
+          <a href="#about">Rreth Nesh</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Shërbimet</h4>
+        <nav class="footer-links">
+          <a href="#services">Dentistri e Përgjithshme</a>
+          <a href="#services">Stomatologji për Fëmijë</a>
+          <a href="#services">Zbardhje & Estetikë</a>
+          <a href="#services">Implante Dentare</a>
+          <a href="#services">Ortodonci</a>
+        </nav>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Kontakt Informata</h4>
+        <div class="footer-info">
+          <div class="footer-info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Rruga Ilirija, Gjilan, Kosovo</span>
+          </div>
+          <div class="footer-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+383 44 212 034</span>
+          </div>
+          <div class="footer-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@smile-dent-ks.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom container">
+      <p>&copy; 2026 SmileDent. Të gjitha të drejtat e rezervuara. Realizuar për Dr. Besnik Emini.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Politika e Privatësisë</a>
+        <a href="#">Kushtet e Përdorimit</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Appointment Booking Modal Popup -->
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Rezervo Termin Shpejt</h3>
+        <button class="modal-close" onclick="closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Modal Booking Form -->
+        <form id="modalForm" onsubmit="handleModalSubmit(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="modalName">Emri & Mbiemri *</label>
+              <input type="text" id="modalName" placeholder="Emri juaj" required>
+            </div>
+            <div class="form-group">
+              <label for="modalPhone">Numri i Telefonit *</label>
+              <input type="tel" id="modalPhone" placeholder="Psh. +383 44 123 456" required>
+            </div>
+            <div class="form-group">
+              <label for="modalService">Shërbimi</label>
+              <select id="modalService">
+                <option value="pergjithshme">Dentistri e Përgjithshme</option>
+                <option value="femije">Dentistri për Fëmijë</option>
+                <option value="estetike">Dentistri Estetike (Zbardhje)</option>
+                <option value="ortodonci">Ortodonci (Aparate)</option>
+                <option value="implante">Implante Dentare</option>
+                <option value="tjeter">Kontrollë / Tjetër</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="modalDate">Data e Preferuar</label>
+              <input type="date" id="modalDate" required>
+            </div>
+            <div class="form-group full-width">
+              <label for="modalMessage">Shënim shtesë (Opsionale)</label>
+              <textarea id="modalMessage" placeholder="Specifikoni ndonjë detaj nëse dëshironi..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Dërgo Kërkesën</button>
+        </form>
+        
+        <!-- Confirmation Success Message (Hidden by default) -->
+        <div class="success-banner" id="modalSuccessBanner">
+          <div class="success-icon">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3>Kërkesa u Dërgua!</h3>
+          <p>Ju faleminderit. Kërkesa juaj për caktimin e terminit te Dr. Besnik Emini u pranua me sukses. Ne do t'ju telefonojmë së shpejti për konfirmim.</p>
+          <button class="btn btn-primary" onclick="closeBookingModal()">Mbyll dritaren</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
