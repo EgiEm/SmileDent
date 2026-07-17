@@ -203,14 +203,12 @@ function handleModalSubmit(e) {
 }
 
 // --- Lightbox Image Viewer Logic ---
-function openLightbox(imgSrc, altText) {
+function openLightbox(imgSrc) {
   const lightbox = document.getElementById('imageLightbox');
   const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxCaption = document.getElementById('lightboxCaption');
   
-  if (lightbox && lightboxImg && lightboxCaption) {
+  if (lightbox && lightboxImg) {
     lightboxImg.src = imgSrc;
-    lightboxCaption.textContent = altText;
     lightbox.style.display = 'flex';
     document.body.style.overflow = 'hidden'; // Stop background page scroll
   }
