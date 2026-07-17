@@ -254,16 +254,16 @@ header.scrolled {
   font-family: var(--font-headings);
 }
 
-.logo svg {
-  fill: var(--primary);
+.logo-icon {
   width: 32px;
   height: 32px;
+  object-fit: contain;
   transition: var(--transition-normal);
 }
 
-.logo:hover svg {
+.logo:hover .logo-icon,
+.footer-logo:hover .logo-icon {
   transform: rotate(15deg) scale(1.1);
-  fill: var(--primary-dark);
 }
 
 .nav-links {
@@ -1269,11 +1269,6 @@ footer {
   font-family: var(--font-headings);
 }
 
-.footer-logo svg {
-  fill: var(--primary);
-  width: 32px;
-  height: 32px;
-}
 
 .footer-links {
   display: flex;
