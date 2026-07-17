@@ -962,8 +962,14 @@ header.scrolled {
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   border: 4px solid var(--light);
-  height: 110px;
+  height: 150px;
   transition: var(--transition-normal);
+}
+
+.pediatric-photo-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .pediatric-photo-item img {
