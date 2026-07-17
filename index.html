@@ -370,17 +370,17 @@
         </div>
         <div class="pediatric-photos">
           <div class="pediatric-photo-item">
-            <a href="img/Kids1.jpg" target="_blank">
+            <a href="javascript:void(0)" onclick="openLightbox('img/Kids1.jpg', 'Vizita nga Kopshti IP Integj - SmileDent')">
               <img src="img/Kids1.jpg" alt="Vizita nga Kopshti IP Integj - SmileDent">
             </a>
           </div>
           <div class="pediatric-photo-item">
-            <a href="img/Kids2.jpg" target="_blank">
+            <a href="javascript:void(0)" onclick="openLightbox('img/Kids2.jpg', 'Fëmijët duke mësuar për dhëmbët')">
               <img src="img/Kids2.jpg" alt="Fëmijët duke mësuar për dhëmbët">
             </a>
           </div>
           <div class="pediatric-photo-item">
-            <a href="img/Kids3.jpg" target="_blank">
+            <a href="javascript:void(0)" onclick="openLightbox('img/Kids3.jpg', 'SmileDent Pediatric Care')">
               <img src="img/Kids3.jpg" alt="SmileDent Pediatric Care">
             </a>
           </div>
@@ -627,6 +627,13 @@
 
       </div>
     </div>
+  </div>
+
+  <!-- Lightbox Image Viewer Overlay -->
+  <div id="imageLightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" alt="SmileDent Image Viewer">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
   </div>
 
   <!-- Custom Script -->

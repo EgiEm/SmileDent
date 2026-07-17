@@ -201,3 +201,25 @@ function handleModalSubmit(e) {
   modalForm.style.display = 'none';
   successBanner.classList.add('active');
 }
+
+// --- Lightbox Image Viewer Logic ---
+function openLightbox(imgSrc, altText) {
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  
+  if (lightbox && lightboxImg && lightboxCaption) {
+    lightboxImg.src = imgSrc;
+    lightboxCaption.textContent = altText;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Stop background page scroll
+  }
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('imageLightbox');
+  if (lightbox) {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = ''; // Resume background page scroll
+  }
+}
